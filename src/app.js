@@ -1,6 +1,19 @@
-import {sum} from './module-a';
+//import * as math from './module-a';
 
-console.log(sum(1, 4));
+//destructing doesn't work
+//e.g. import {sum: anotherSum} from './module-a';
+import {
+  sum as anotherSum,
+  bar,
+  myNumber,
+} from './module-a';
+
+import ddd from './module-a';
+
+console.log(anotherSum(1, 4));
+bar();
+console.log(ddd);
+console.log(myNumber);
 
 const bob = {
   name: 'Bob',
@@ -76,3 +89,35 @@ function myTag(strings, personExp, ageExp) {
 
 var output = myTag`that ${ person } is a ${ age }`;
 console.log(output);
+
+// const [a, , b] = [1, 2, 3];
+// console.log(a, b);
+
+function getASTNode() {
+  return {
+    op: 1,
+    lhs: {
+      op: 2
+    },
+    rhs: 3
+  };
+}
+
+//this may be more readable than packing to one line
+const {
+  op: a,
+  lhs: {
+    op: b
+  },
+  rhs: c
+} = getASTNode();
+console.log(a, b, c);
+
+let s = new Set();
+s.add('hello').add('fun').add('hello');
+console.log(s.size);
+for (let x of s) {
+  console.log(x);
+}
+
+console.log(Number.EPSILON);
