@@ -76,3 +76,7 @@ function myTag(strings, personExp, ageExp) {
 
 var output = myTag`that ${ person } is a ${ age }`;
 console.log(output);
+
+var x = {foo:'x'};
+console.log(x);
+console.log({...x});
