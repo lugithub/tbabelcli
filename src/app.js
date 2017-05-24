@@ -10,6 +10,9 @@ import {
 
 import ddd from './module-a';
 
+import { foo } from './middleware-ex';
+
+
 console.log(anotherSum(1, 4));
 bar();
 console.log(ddd);
@@ -125,3 +128,5 @@ for (let x of s) {
 }
 
 console.log(Number.EPSILON);
+
+foo();
