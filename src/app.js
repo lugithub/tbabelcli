@@ -1,3 +1,5 @@
+import "babel-polyfill";
+
 //import * as math from './module-a';
 
 //destructing doesn't work
@@ -12,6 +14,9 @@ import ddd from './module-a';
 
 import { foo } from './middleware-ex';
 
+import { f1 } from './try-await';
+
+f1();
 
 console.log(anotherSum(1, 4));
 bar();
